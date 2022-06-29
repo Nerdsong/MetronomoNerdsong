@@ -1,0 +1,76 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    
+    }
+
+.base{
+    place-content: center;
+}
+
+header{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 4rem;
+    background-color: rgb(140, 240, 198);
+    color: white;
+}
+
+.imagenMetronomo{
+    width: 4rem;
+    margin-bottom: -0.3rem;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.contenedorInput{
+    text-align: center;
+}
+
+.botonera{
+    text-align: center;
+}
+
+button{
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    background-color: rgb(79, 139, 114);
+    text-align: center;
+    border-radius: 3rem;
+    border-color: rgb(79, 139, 114);
+    padding: 0.5rem;    
+}
+
+.botonTap{
+    font-size: 4rem;
+    padding: 2rem;
+    background-color: rgb(103, 241, 103);
+    border-color: rgb(89, 211, 89);
+}
+
+.botonDetener{
+    background-color: rgb(235, 131, 131);
+    border-color: rgb(235, 131, 131);
+}
+
+input{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;;
+    font-size: 5rem;
+    width: 12rem;
+    border-radius: 20rem;
+    border-color: rgb(140, 240, 198);
+    border-style: dotted;
+    ;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
