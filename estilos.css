@@ -17,7 +17,7 @@ header{
     color: white;
 }
 
-.imagenMetronomo{
+.imagenMetronomos{
     width: 4rem;
     margin-bottom: -0.3rem;
     margin-top: 0.5rem;
@@ -41,6 +41,12 @@ button{
     border-radius: 3rem;
     border-color: rgb(79, 139, 114);
     padding: 0.5rem;    
+}
+
+.aumentar_disminuir_boton{
+    padding-top: 0.01rem;
+    padding-bottom: 0.1rem;
+    border-radius: 2rem;
 }
 
 .botonTap{
@@ -68,9 +74,12 @@ input{
     ;
 }
 
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
     }
 input[type=number] { -moz-appearance:textfield; }
+
+

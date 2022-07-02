@@ -8,11 +8,15 @@ let beatsPorMinuto = 0 //"Beats por minuto ingresados por el usuario"
 let selectorSonido = 0 //"alternación entre sonido tic y tac del metronomo"
 let ejecucionMetronomo = "acá va la función a ejecutar con setInterval"
 
+
 function definirBPM(){
     beatsPorMinuto = document.querySelector("#beats_por_minuto").value;
     beatsPorMinuto = (MINUTOS/beatsPorMinuto);
-    console.log(beatsPorMinuto);
+    
 }
+
+
+
 
 function funcionRepetidaBPM(){
     selectorSonido ++
@@ -20,22 +24,27 @@ function funcionRepetidaBPM(){
     switch(selectorSonido){
         case 1:
             SONIDO_TIC.play()
+            detenerMetronomo()
+            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
             
         break;
 
         case 2: 
             SONIDO_TAC.play()
-            
+            detenerMetronomo()
+            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
         break;
 
         case 3:
             SONIDO_TAC.play()
-            
+            detenerMetronomo()
+            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
         break;
 
         case 4:
             SONIDO_TAC.play()
-            
+            detenerMetronomo()
+            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
             selectorSonido = 0;
         break;
 
@@ -89,4 +98,19 @@ function asignacionBeatsPorMinutoTap(){
     beatsPorMinutoTap = (MINUTOS/beatsPorMinutoTap);
     document.querySelector("#beats_por_minuto").value = Math.floor(beatsPorMinutoTap)
     definirBPM()
+}
+
+function asignacionBeatsPorMinutoSlide(){
+    document.querySelector("#beats_por_minuto").value = document.querySelector("#slider_bpm").value;
+    definirBPM()
+}
+
+function aumentarBPM(){
+    document.querySelector("#slider_bpm").value ++ ;
+    asignacionBeatsPorMinutoSlide()
+}
+
+function disminuirBPM(){
+    document.querySelector("#slider_bpm").value -- ;
+    asignacionBeatsPorMinutoSlide()
 }
