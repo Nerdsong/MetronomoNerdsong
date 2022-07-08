@@ -14,7 +14,7 @@
     <header><img class = "imagenMetronomos" src="./Imagenes/imagenMetronomo.png"> Metrónomo </header>
     <div class="base">
     <div class="contenedorInput">
-    <input id = "beats_por_minuto" type="number" onchange="definirBPM()" placeholder="bpm." min= 20><br>
+    <label class="contenedorInput"><input id = "beats_por_minuto" type="number" onchange="definirBPM()" placeholder="--" min= 20>bpm</label><br>
     <button class="aumentar_disminuir_boton" onclick="disminuirBPM()">-</button>
     <input id="slider_bpm" type = range max = "260" min = "20" oninput="asignacionBeatsPorMinutoSlide()"></input>
     <button class="aumentar_disminuir_boton" onclick="aumentarBPM()">+</button>

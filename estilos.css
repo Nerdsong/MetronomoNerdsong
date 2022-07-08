@@ -26,6 +26,8 @@ header{
 
 .contenedorInput{
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
 }
 
 .botonera{
@@ -90,10 +92,10 @@ input{
     text-align: center;
     font-family: 'Permanent Marker', cursive;;
     font-size: 5rem;
-    width: 12rem;
-    border-radius: 20rem;
+    width: 9.9rem;
+    border-radius: 0rem;
     border-color: rgb(0, 0, 0);
-    border-style: dotted;
+    border-style:hidden;
     ;
 }
 

@@ -11,7 +11,7 @@ let ejecucionMetronomo = "acá va la función a ejecutar con setInterval"
 
 function definirBPM(){
     beatsPorMinuto = document.querySelector("#beats_por_minuto").value;
-    beatsPorMinuto = (MINUTOS/beatsPorMinuto);
+    beatsPorMinuto = (MINUTOS/beatsPorMinuto) ;
     
 }
 
