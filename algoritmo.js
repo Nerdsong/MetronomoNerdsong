@@ -139,7 +139,7 @@ const LIMITE_MAXIMO_POR_NUMERO = 13;
 const LIMITE_MINIMO_POR_NUMERO = 1;
 const LIMITE_TOTAL_SUMATORIA = 16
 let limiteVariableAleatorio = 16;
-
+let numeroRestante = "";
 
 function generarNumeroAleatorio(numeroAleatorio){
 
@@ -161,7 +161,11 @@ function mostrarNumeroAleatorio(){
     limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio;
     cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
 
-    document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
+    if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio != LIMITE_TOTAL_SUMATORIA){
+        numeroRestante = 16 - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio)
+        cuartoNumeroAleatorio = numeroRestante;
+    }
+        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
 }
 
 
