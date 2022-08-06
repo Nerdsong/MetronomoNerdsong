@@ -7,6 +7,7 @@ let beatsPorMinuto = 0 //"Beats por minuto ingresados por el usuario"
 
 let selectorSonido = 0 //"alternación entre sonido tic y tac del metronomo"
 let ejecucionMetronomo = "acá va la función a ejecutar con setInterval"
+let numeroDeCompás = 0
 
 
 function definirBPM(){
@@ -20,7 +21,7 @@ function definirBPM(){
 
 function funcionRepetidaBPM(){
     selectorSonido ++
-
+    contadorDeCompases()
     switch(selectorSonido){
         case 1:
             SONIDO_TIC.play()
@@ -52,8 +53,18 @@ function funcionRepetidaBPM(){
 
 }
 
+function contadorDeCompases(){
+    numeroDeCompás ++
+    if (numeroDeCompás == 16){
+        mostrarNumeroAleatorio()
+        numeroDeCompás = 0
+    }
+}
+
 function iniciarMetronomo(){
     detenerMetronomo()
+    mostrarNumeroAleatorio()
+    numeroDeCompás = 0
     selectorSonido = 0
     ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
 }
@@ -114,3 +125,44 @@ function disminuirBPM(){
     document.querySelector("#slider_bpm").value -- ;
     asignacionBeatsPorMinutoSlide()
 }
+
+// Creación de algoritmo para aleatorizar cada 4 compases 4 números que en total sumen 16
+
+//Variables que contendrán cada uno de los cuatro números aleatorios
+let primerNumeroAleatorio = "";
+let segundoNumeroAleatorio = "";
+let tercerNumeroAleatorio = "";
+let cuartoNumeroAleatorio = "";
+//Cada numero debe ser mayor a 0 y juntos deben sumar 16, por lo tanto ningún número puede ser mayor a 13
+//  para hacerlo, determinamos una constante y una variable que controlen el limite máximo del número aleatorio
+const LIMITE_MAXIMO_POR_NUMERO = 13;
+const LIMITE_MINIMO_POR_NUMERO = 1;
+const LIMITE_TOTAL_SUMATORIA = 16
+let limiteVariableAleatorio = 16;
+
+
+function generarNumeroAleatorio(numeroAleatorio){
+
+    numeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+    console.log(numeroAleatorio);
+}
+
+function mostrarNumeroAleatorio(){
+    limiteVariableAleatorio = LIMITE_MAXIMO_POR_NUMERO;
+    primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - 2;
+    segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+    
+    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - segundoNumeroAleatorio - 1;
+    tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio;
+    cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+    document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
+}
+
+
+mostrarNumeroAleatorio()

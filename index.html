@@ -15,6 +15,7 @@
     <div class="base">
     <div class="contenedorInput">
     <label class="contenedorInput"><input id = "beats_por_minuto" type="number" onchange="definirBPM()" placeholder="--" min= 20>bpm</label><br>
+    <span class="estilosSecuencia" id="secuencia_ejercicio"></span><br>
     <button class="aumentar_disminuir_boton" onclick="disminuirBPM()">-</button>
     <input id="slider_bpm" type = range max = "260" min = "20" oninput="asignacionBeatsPorMinutoSlide()"></input>
     <button class="aumentar_disminuir_boton" onclick="aumentarBPM()">+</button>
