@@ -44,6 +44,7 @@ button{
     border-color: rgb(36, 126, 18);
     padding: 0.5rem;    
     box-shadow: 0px 0px 0.3rem  black;
+
 }
 button:active{
     animation-name: clickboton;
@@ -60,6 +61,7 @@ button:active{
     padding-top: 0.01rem;
     padding-bottom: 0.1rem;
     border-radius: 0rem;
+    margin-bottom: 1rem;
 }
 
 .botonTap{
@@ -84,6 +86,17 @@ button:active{
 .botonDetener{
     background-color: rgb(192, 37, 37);
     border-color: rgb(124, 30, 30);
+    position: relative;
+    bottom: 3.5rem;
+
+}
+
+.botonIniciar{
+    background-color:rgb(56, 168, 34);
+    border-color: rgb(36, 126, 18);
+    position: relative;
+    bottom: 3.5rem;
+
 }
 
 input{
