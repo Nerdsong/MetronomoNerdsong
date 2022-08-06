@@ -15,6 +15,7 @@
     <div class="base">
     <div class="contenedorInput">
     <label class="contenedorInput"><input id = "beats_por_minuto" type="number" onchange="definirBPM()" placeholder="--" min= 20>bpm</label><br>
+    <span class="estilosSecuenciaTitulo">Secuencia ritmica</span><br>
     <span class="estilosSecuencia" id="secuencia_ejercicio"></span><br>
     <button class="aumentar_disminuir_boton" onclick="disminuirBPM()">-</button>
     <input id="slider_bpm" type = range max = "260" min = "20" oninput="asignacionBeatsPorMinutoSlide()"></input>
@@ -23,9 +24,17 @@
     <div class = "botonera">
     <button class= "botonIniciar" onclick="iniciarMetronomo()">iniciar</button>
     <button class="botonDetener" onclick="detenerMetronomo()">detener</button>
+    <select class="seleccionCompases" id="selector_compases" onchange="mostrarNumeroAleatorio()">
+        <option value="3" >3/4</option>
+        <option value="4" selected="selected" >4/4</option>
+        <option value="5" >5/4</option>
+        <option value="6" >6/4</option>
+        <option value="7" >7/4</option>
+    </select>
     <button class="botonTap" onclick="funcionTap()">tap</button>
     </div>
     </div>
+    
     <script src="algoritmo.js"></script>
 </body>
 </html>

@@ -98,6 +98,14 @@ button:active{
     bottom: 3.5rem;
 
 }
+.seleccionCompases{
+    background-color:rgb(46, 46, 46);
+    color: white;
+    position: relative;
+    font-family: 'Bebas Neue', cursive;
+    bottom: 3.5rem;
+    font-size: 2.4rem;
+}
 
 input{
     margin-top: 2rem;
@@ -121,7 +129,15 @@ input{
     border-radius: 3rem;
     font-size: 2.5rem;
 }
-
+.estilosSecuenciaTitulo{
+    color: black;
+    background-color: white;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 3rem;
+    font-size: 2.5rem;
+}
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

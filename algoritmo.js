@@ -10,6 +10,7 @@ let ejecucionMetronomo = "acá va la función a ejecutar con setInterval"
 let numeroDeCompás = 0
 
 
+
 function definirBPM(){
     beatsPorMinuto = document.querySelector("#beats_por_minuto").value;
     beatsPorMinuto = (MINUTOS/beatsPorMinuto) ;
@@ -21,45 +22,211 @@ function definirBPM(){
 
 function funcionRepetidaBPM(){
     selectorSonido ++
-    contadorDeCompases()
-    switch(selectorSonido){
-        case 1:
-            SONIDO_TIC.play()
-            detenerMetronomo()
-            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
-            
-        break;
+    if (limiteTotalSumatoria == 12){
+        switch(selectorSonido){
+            case 1:
+                contadorDeCompases()
+                SONIDO_TIC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
 
-        case 2: 
-            SONIDO_TAC.play()
-            detenerMetronomo()
-            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
-        break;
+            case 2:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
 
-        case 3:
-            SONIDO_TAC.play()
-            detenerMetronomo()
-            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
-        break;
-
-        case 4:
-            SONIDO_TAC.play()
-            detenerMetronomo()
-            ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
-            selectorSonido = 0;
-        break;
-
+            case 3:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                selectorSonido = 0;
+            break;
+        }
     }
+    else if (limiteTotalSumatoria == 16){
+        switch(selectorSonido){
+            case 1:
+                contadorDeCompases()
+                SONIDO_TIC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
 
+            case 2:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 3:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 4:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                selectorSonido = 0;
+            break;
+        }
+    }
+    else if (limiteTotalSumatoria == 20){
+        switch(selectorSonido){
+            case 1:
+                contadorDeCompases()
+                SONIDO_TIC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
+
+            case 2:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 3:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 4:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
+
+            case 5:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                selectorSonido = 0;
+            break;
+        }
+    }
+    else if (limiteTotalSumatoria == 24){
+        switch(selectorSonido){
+            case 1:
+                contadorDeCompases()
+                SONIDO_TIC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
+
+            case 2:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 3:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 4:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)                
+            break;
+
+            case 5:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 6:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                selectorSonido = 0;
+            break;
+        }
+    }
+    else if (limiteTotalSumatoria == 28){
+        switch(selectorSonido){
+            case 1:
+                contadorDeCompases()
+                SONIDO_TIC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                
+            break;
+
+            case 2:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 3:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 4:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)                
+            break;
+
+            case 5:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 6:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+            break;
+
+            case 7:
+                contadorDeCompases()
+                SONIDO_TAC.play()
+                detenerMetronomo()
+                ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+                selectorSonido = 0;
+            break;
+        }
+    }
+    
 }
 
-function contadorDeCompases(){
-    numeroDeCompás ++
-    if (numeroDeCompás == 16){
-        mostrarNumeroAleatorio()
-        numeroDeCompás = 0
-    }
-}
+
 
 function iniciarMetronomo(){
     detenerMetronomo()
@@ -133,40 +300,149 @@ let primerNumeroAleatorio = "";
 let segundoNumeroAleatorio = "";
 let tercerNumeroAleatorio = "";
 let cuartoNumeroAleatorio = "";
+let quintoNumeroAleatorio = "";
+let sextoNumeroAleatorio = "";
+let septimoNumeroAleatorio = "";
 //Cada numero debe ser mayor a 0 y juntos deben sumar 16, por lo tanto ningún número puede ser mayor a 13
 //  para hacerlo, determinamos una constante y una variable que controlen el limite máximo del número aleatorio
 const LIMITE_MAXIMO_POR_NUMERO = 13;
 const LIMITE_MINIMO_POR_NUMERO = 1;
-const LIMITE_TOTAL_SUMATORIA = 16
+let limiteTotalSumatoria = "valor variable según la métrica del compás"; 
+const VALOR_CORCHEA = 4
 let limiteVariableAleatorio = 16;
 let numeroRestante = "";
 
-function generarNumeroAleatorio(numeroAleatorio){
-
-    numeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
-
-    console.log(numeroAleatorio);
+function asignacionMetricaCompas(){
+    limiteTotalSumatoria = document.querySelector("#selector_compases").value * VALOR_CORCHEA;
+    console.log(limiteTotalSumatoria);
 }
+
+function contadorDeCompases(){
+    asignacionMetricaCompas()
+    numeroDeCompás ++
+    if (numeroDeCompás == limiteTotalSumatoria){
+        mostrarNumeroAleatorio()
+        numeroDeCompás = 0
+    }
+}
+
+function resetearContadorCompases (){
+    numeroDeCompás = 0
+}
+
 
 function mostrarNumeroAleatorio(){
-    limiteVariableAleatorio = LIMITE_MAXIMO_POR_NUMERO;
-    primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+    asignacionMetricaCompas()
+    if(limiteTotalSumatoria == 12){
+        limiteVariableAleatorio = 10;
+        primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
 
-    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - 2;
-    segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
-    
-    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - segundoNumeroAleatorio - 1;
-    tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - 1;
+        segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio;
+        tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
 
-    limiteVariableAleatorio = LIMITE_TOTAL_SUMATORIA - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio;
-    cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
-
-    if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio != LIMITE_TOTAL_SUMATORIA){
-        numeroRestante = 16 - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio)
-        cuartoNumeroAleatorio = numeroRestante;
+        if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio != limiteTotalSumatoria){
+            numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio)
+            tercerNumeroAleatorio = numeroRestante;
+        }
+        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio}`
     }
+
+    else if(limiteTotalSumatoria == 16){
+        limiteVariableAleatorio = 13;
+        primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - 2;
+        segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - 1;
+        tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio;
+        cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio != limiteTotalSumatoria){
+            numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio)
+            cuartoNumeroAleatorio = numeroRestante;
+        }
         document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
+    }
+    else if(limiteTotalSumatoria == 20){
+        limiteVariableAleatorio = 16;
+        primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - 3;
+        segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - 2;
+        tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - 1;
+        cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio;
+        quintoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio != limiteTotalSumatoria){
+            numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio)
+            quintoNumeroAleatorio = numeroRestante;
+        }
+        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio}`
+    }
+    else if(limiteTotalSumatoria == 24){
+        limiteVariableAleatorio = 19;
+        primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - 4;
+        segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - 3;
+        tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - 2;
+        cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio - 1;
+        quintoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio - quintoNumeroAleatorio;
+        sextoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio + sextoNumeroAleatorio != limiteTotalSumatoria){
+            numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio)
+            sextoNumeroAleatorio = numeroRestante;
+        }
+        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio}`
+
+    }
+    else if(limiteTotalSumatoria == 28){
+        limiteVariableAleatorio = 22;
+        primerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - 5;
+        segundoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+        
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - 4;
+        tercerNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - 3;
+        cuartoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1);
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio - 2;
+        quintoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio - quintoNumeroAleatorio -1;
+        sextoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        limiteVariableAleatorio = limiteTotalSumatoria - primerNumeroAleatorio - segundoNumeroAleatorio - tercerNumeroAleatorio - cuartoNumeroAleatorio - quintoNumeroAleatorio - sextoNumeroAleatorio;
+        septimoNumeroAleatorio = Math.floor((Math.random()*(limiteVariableAleatorio-1+1))+1)
+
+        if(primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio + sextoNumeroAleatorio + septimoNumeroAleatorio != limiteTotalSumatoria){
+            numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio + sextoNumeroAleatorio)
+            septimoNumeroAleatorio = numeroRestante;
+        }
+        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio} - ${septimoNumeroAleatorio}`    
+    }
 }
-
-
-mostrarNumeroAleatorio()
