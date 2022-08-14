@@ -11,7 +11,7 @@ let numeroDeCompás = 0
 
 function validarBpm(){
     
-        alert("¡Ponga un BPM hijueputa, tampoco puedo hacer todo yo!                    Puede escribirlo, también puede ponerlo con el Slide o el Tap. Disculpe el desorden")
+        alert('¡Ponga un BPM hijueputa!\nPuede escribirlo, también puede ponerlo con el Slide o el Tap.\n\nDisculpe el desorden.')
 
 }
 
