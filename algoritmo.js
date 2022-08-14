@@ -9,6 +9,11 @@ let selectorSonido = 0 //"alternación entre sonido tic y tac del metronomo"
 let ejecucionMetronomo = "acá va la función a ejecutar con setInterval"
 let numeroDeCompás = 0
 
+function validarBpm(){
+    
+        alert("¡Ponga un BPM hijueputa, tampoco puedo hacer todo yo!                    Puede escribirlo, también puede ponerlo con el Slide o el Tap. Disculpe el desorden")
+
+}
 
 
 function definirBPM(){
@@ -229,11 +234,16 @@ function funcionRepetidaBPM(){
 
 
 function iniciarMetronomo(){
-    detenerMetronomo()
-    mostrarNumeroAleatorio()
-    numeroDeCompás = 0
-    selectorSonido = 0
-    ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+    if(document.querySelector("#beats_por_minuto").value == ""){
+        validarBpm()
+    }
+    else{
+        detenerMetronomo()
+        generarNumeroAleatorio()
+        numeroDeCompás = 0
+        selectorSonido = 0
+        ejecucionMetronomo = setInterval(funcionRepetidaBPM,beatsPorMinuto)
+    }
 }
 
 function detenerMetronomo(){
@@ -314,14 +324,16 @@ let numeroRestante = "";
 
 function asignacionMetricaCompas(){
     limiteTotalSumatoria = document.querySelector("#selector_compases").value * VALOR_CORCHEA;
-    console.log(limiteTotalSumatoria);
 }
 
 function contadorDeCompases(){
     asignacionMetricaCompas()
     numeroDeCompás ++
-    if (numeroDeCompás == limiteTotalSumatoria){
-        mostrarNumeroAleatorio()
+    if (numeroDeCompás >= limiteTotalSumatoria & patronRitmicoAuto.checked == true){
+        generarNumeroAleatorio()
+        numeroDeCompás = 0
+    }
+    else if (numeroDeCompás == limiteTotalSumatoria & patronRitmicoManual.checked == true){
         numeroDeCompás = 0
     }
 }
@@ -330,8 +342,25 @@ function resetearContadorCompases (){
     numeroDeCompás = 0
 }
 
+function mostrarNumeroAleatorio(variable){
+    document.querySelector("#secuencia_ejercicio").innerHTML= variable
+}
 
-function mostrarNumeroAleatorio(){
+function checkearManual(){
+    document.getElementById("manual").checked = true;
+}
+
+function guardarGrupoGenerado(){
+    grupoAleatorioGenerado= grupoAnteriorGenerado;
+}
+let grupoAleatorioGenerado = ""
+var grupoAnteriorGenerado = ""
+var grupoGuardado = ""
+var historialSecuencias = "";
+
+function generarNumeroAleatorio(){
+    grupoGuardado = grupoAnteriorGenerado;
+    grupoAnteriorGenerado = grupoAleatorioGenerado;
     asignacionMetricaCompas()
     if(limiteTotalSumatoria == 12){
         limiteVariableAleatorio = 10;
@@ -347,7 +376,9 @@ function mostrarNumeroAleatorio(){
             numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio)
             tercerNumeroAleatorio = numeroRestante;
         }
-        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio}`
+        grupoAleatorioGenerado =  `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio}`
+        mostrarNumeroAleatorio(grupoAleatorioGenerado)
+        historialSecuencias += grupoAleatorioGenerado + `<br>`
     }
 
     else if(limiteTotalSumatoria == 16){
@@ -367,7 +398,9 @@ function mostrarNumeroAleatorio(){
             numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio)
             cuartoNumeroAleatorio = numeroRestante;
         }
-        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
+        grupoAleatorioGenerado = `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio}`
+        mostrarNumeroAleatorio(grupoAleatorioGenerado)
+        historialSecuencias += grupoAleatorioGenerado + `<br>`
     }
     else if(limiteTotalSumatoria == 20){
         limiteVariableAleatorio = 16;
@@ -389,7 +422,9 @@ function mostrarNumeroAleatorio(){
             numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio)
             quintoNumeroAleatorio = numeroRestante;
         }
-        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio}`
+        grupoAleatorioGenerado = `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio}`
+        mostrarNumeroAleatorio(grupoAleatorioGenerado)
+        historialSecuencias += grupoAleatorioGenerado + `<br>`
     }
     else if(limiteTotalSumatoria == 24){
         limiteVariableAleatorio = 19;
@@ -414,8 +449,9 @@ function mostrarNumeroAleatorio(){
             numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio)
             sextoNumeroAleatorio = numeroRestante;
         }
-        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio}`
-
+        grupoAleatorioGenerado = `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio}`
+        mostrarNumeroAleatorio(grupoAleatorioGenerado)
+        historialSecuencias += grupoAleatorioGenerado + `<br>`
     }
     else if(limiteTotalSumatoria == 28){
         limiteVariableAleatorio = 22;
@@ -443,6 +479,19 @@ function mostrarNumeroAleatorio(){
             numeroRestante = limiteTotalSumatoria - (primerNumeroAleatorio + segundoNumeroAleatorio + tercerNumeroAleatorio + cuartoNumeroAleatorio + quintoNumeroAleatorio + sextoNumeroAleatorio)
             septimoNumeroAleatorio = numeroRestante;
         }
-        document.querySelector("#secuencia_ejercicio").innerHTML= `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio} - ${septimoNumeroAleatorio}`    
+        grupoAleatorioGenerado = `${primerNumeroAleatorio} - ${segundoNumeroAleatorio} - ${tercerNumeroAleatorio} - ${cuartoNumeroAleatorio} - ${quintoNumeroAleatorio} - ${sextoNumeroAleatorio} - ${septimoNumeroAleatorio}`    
+        mostrarNumeroAleatorio(grupoAleatorioGenerado)
+        historialSecuencias += grupoAleatorioGenerado + `<br>`
     }
+}
+
+let patronRitmicoManual = document.getElementById("manual");
+let patronRitmicoAuto = document.getElementById("automatico");
+
+function mostrarHistorial(){
+    document.querySelector("#historial_secuencias").innerHTML = historialSecuencias
+}
+
+function ocultarHistorial(){
+    document.querySelector("#historial_secuencias").innerHTML = ""
 }

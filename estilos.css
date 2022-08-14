@@ -137,6 +137,7 @@ input{
     padding-right: 3rem;
     border-radius: 3rem;
     font-size: 2.5rem;
+    font-family: 'Permanent Marker', cursive;
 }
 
 input[type=number]::-webkit-inner-spin-button,

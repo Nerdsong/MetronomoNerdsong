@@ -20,6 +20,8 @@
     <button class="aumentar_disminuir_boton" onclick="disminuirBPM()">-</button>
     <input id="slider_bpm" type = range max = "260" min = "20" oninput="asignacionBeatsPorMinutoSlide()"></input>
     <button class="aumentar_disminuir_boton" onclick="aumentarBPM()">+</button>
+    <button class="aumentar_disminuir_boton" onclick="mostrarNumeroAleatorio(grupoAnteriorGenerado), checkearManual(), guardarGrupoGenerado()">Secuencia anterior</button>
+    <button class="aumentar_disminuir_boton" onclick="generarNumeroAleatorio(), checkearManual()">Nueva secuencia</button>
     </div>
     <div class = "botonera">
     <button class= "botonIniciar" onclick="iniciarMetronomo()">iniciar</button>
@@ -31,9 +33,16 @@
         <option value="6" >6/4</option>
         <option value="7" >7/4</option>
     </select>
+    <input id="manual" type= radio name="automaticomanual"> Manual</input>
+    <input id="automatico" type= radio name="automaticomanual" checked> Automático </input>
     <button class="botonTap" onclick="funcionTap()">tap</button>
     </div>
     </div>
+    <div id="bononera_historial">
+        <button onclick="mostrarHistorial()">Historial</button>
+        <div id="historial_secuencias" class="estilosSecuenciaTitulo"></div>
+        <button onclick="ocultarHistorial()">Ocultar</button>
+    </div>  
     
     <script src="algoritmo.js"></script>
 </body>
